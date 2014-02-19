@@ -1,9 +1,14 @@
 class Artist
-  attr_reader :name, :songs
+  attr_accessor :name
+  attr_reader :songs
   @@artists = []
 
+  def self.find_by_name(name)
+    @@artists.detect{|a| a.name}
+  end
+
   def initialize
-    @@all << self
+    @@artists << self
     @songs = []
   end
 
@@ -12,11 +17,11 @@ class Artist
   end
 
   def self.reset_all
-    @@artists.clear
+    self.all.clear
   end
 
   def self.count
-    self.all.count
+    @@artists.count
   end
 
   def add_song(song)
