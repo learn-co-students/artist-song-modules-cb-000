@@ -35,6 +35,11 @@ describe Artist do
       Artist.count.should eq(1)
     end
 
+    it "can find an artist by name" do
+      artist.name = 'Miley Cyrus'
+      Artist.find_by_name('Miley Cyrus').should eq(artist)
+    end
+
     it "can reset the artists that have been created" do
       Artist.reset_all
       Artist.count.should eq(0)

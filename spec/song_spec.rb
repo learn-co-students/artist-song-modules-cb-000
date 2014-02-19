@@ -36,6 +36,11 @@ describe Song do
       Song.count.should eq(1)
     end
 
+    it "can find a song by name" do
+      song.name = "Jump Around"
+      Song.find_by_name("Jump Around").should eq(song)
+    end
+
     it "can reset the songs that have been created" do
       Song.reset_all
       Song.count.should eq(0)
