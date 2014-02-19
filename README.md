@@ -13,13 +13,13 @@ There is also test coverage, and an environment. Finally, this lab provides a re
 
 ## Tasks
 
-### [] Debug the Current Failing Error
+### Debug the Current Failing Error
 
 Look at your failing tests. Something is wrong. The error isn't so helpful at first. Go slow and take the code apart, use pry, find the bug, fix it. What lines of code are called?
 
 ## Extract Modules
 
-### [] Memorable
+### Memorable
 
 Build a `Memorable` module in `concerns/memorable.rb` that consolidates the logic that allows a class to remember instances of itself in memory.
 
@@ -48,11 +48,11 @@ It's okay for a module to rely on the class implementing a certain API, but a mo
 
 Try to refactor the initialize method of both classes into Memorable::InstanceMethods, mix it in correctly, and use super to allow the classes to extend their own initialize methods.
 
-### [] Findable
+### Findable
 
 Build a `Findable` module in `concerns/findable.rb`. This module should handle the `.find_by_name` method for both classes.
 
-### [] Paramable
+### Paramable
 
 Build a `Paramable` module in `concerns/paramable.rb`. This module should handle the `#to_param` method for both classes.
 
