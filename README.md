@@ -21,11 +21,10 @@ Look at your failing tests. Something is wrong. The error isn't so helpful at fi
 
 ### Memorable
 
-Build a `Memorable` module in `concerns/memorable.rb` that consolidates the logic that allows a class to remember instances of itself in memory.
+Build a `Memorable` module in `lib/concerns/memorable.rb` that consolidates the logic that allows a class to remember instances of itself in memory.
 
 You will need to extract the following methods into that module, within a `ClassMethods` sub-module.
 
-- `.all`
 - `.reset_all`
 - `.count`
 
@@ -50,11 +49,11 @@ Try to refactor the initialize method of both classes into Memorable::InstanceMe
 
 ### Findable
 
-Build a `Findable` module in `concerns/findable.rb`. This module should handle the `.find_by_name` method for both classes.
+Build a `Findable` module in `lib/concerns/findable.rb`. This module should handle the `.find_by_name` method for both classes.
 
 ### Paramable
 
-Build a `Paramable` module in `concerns/paramable.rb`. This module should handle the `#to_param` method for both classes.
+Build a `Paramable` module in `lib/concerns/paramable.rb`. This module should handle the `#to_param` method for both classes.
 
 ### BONUS: Refactoring the Test Suite
 
