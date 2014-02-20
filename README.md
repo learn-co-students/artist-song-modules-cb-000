@@ -9,7 +9,7 @@ This lab is all about sharing behavior between classes using modules. It also in
 
 Already provided is the non-DRY version of the artist and song classes. These classes are similar to those that you saw in the playlister domain.  If you look at the Artist and Song class, the majority of the functionality is duplicated. Literally, there are methods that say the exact same thing.
 
-There is also test coverage, and an environment. Finally, this lab provides a report on test coverage powered by [SimpleCov](https://github.com/colszowka/simplecov). Run `rspec` and then run `open coverage/index.html`. That file is generated every time you run your tests and will show you which lines of code are triggered when a test is run. As you can see, we're at 100%. Keep it that way.
+There is also test coverage, and an environment. Finally, this lab provides a report on test coverage powered by [SimpleCov](https://github.com/colszowka/simplecov). Install simplecov with `gem install simplecov`, run `rspec` and then run `open coverage/index.html`. That file is generated every time you run your tests and will show you which lines of code are triggered when a test is run. As you can see, we're at 100%. Keep it that way.
 
 ## Tasks
 
