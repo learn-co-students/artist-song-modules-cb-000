@@ -1,6 +1,7 @@
 ---
 tags: modules, oo
 language: ruby
+  resources: 2
 ---
 
 # Artists and Songs
@@ -63,3 +64,7 @@ The test suite now has a lot of duplicate tests. RSpec provides a mechanism for 
 
 Don't forget to modify your environment as needed.
 
+
+## Resources
+* [Relish](https://www.relishapp.com/rspec/) - [Implicit subject](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples)
+* [Relish](https://www.relishapp.com/rspec/) - [Shared examples](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples)
