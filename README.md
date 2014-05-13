@@ -1,6 +1,6 @@
 ---
-tags: modules, oo
-language: ruby
+  tags: modules, oo
+  language: ruby
   resources: 2
 ---
 
