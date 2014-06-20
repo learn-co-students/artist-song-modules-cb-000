@@ -13,36 +13,36 @@ describe Artist do
 
 
   it "can be initialized" do
-    artist.should be_an_instance_of(Artist)
+    expect(artist).to be_an_instance_of(Artist)
   end
 
   it "can have a name" do
     artist.name = "Adele"
-    artist.name.should eq("Adele")
+    expect(artist.name).to eq("Adele")
   end
 
   it 'converts its name to a url friendly parameter' do
     artist.name = 'Miley Cyrus'
-    artist.to_param.should == "miley-cyrus"
+    expect(artist.to_param).to eq("miley-cyrus")
   end
 
   describe "Class methods" do
     it "keeps track of the artists that have been created" do
-      Artist.all.should include(artist)
+      expect(Artist.all).to include(artist)
     end
 
     it "can count how many artists have been created" do
-      Artist.count.should eq(1)
+      expect(Artist.count).to eq(1)
     end
 
     it "can find an artist by name" do
       artist.name = 'Miley Cyrus'
-      Artist.find_by_name('Miley Cyrus').should eq(artist)
+      expect(Artist.find_by_name('Miley Cyrus')).to eq(artist)
     end
 
     it "can reset the artists that have been created" do
       Artist.reset_all
-      Artist.count.should eq(0)
+      expect(Artist.count).to eq(0)
     end
   end
 
@@ -51,12 +51,12 @@ describe Artist do
 
     it "can have a song added" do
       artist.add_song(song)
-      artist.songs.should include(song)
+      expect(artist.songs).to include(song)
     end
 
     it "knows how many songs it has" do
       artist.add_songs([song, Song.new])
-      artist.songs.count.should eq(2)
+      expect(artist.songs.count).to eq(2)
     end
   end
 
