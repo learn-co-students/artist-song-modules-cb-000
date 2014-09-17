@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/amandahimmelstoss/Development/flatiron-ta/ruby-labs/artist-song-modules/lib/concerns/findable.rb": [
+      "/Users/katie/Documents/flatiron/games/artist-song-modules/lib/concerns/findable.rb": [
         1,
         1,
         1,
@@ -10,7 +10,7 @@
         null,
         null
       ],
-      "/Users/amandahimmelstoss/Development/flatiron-ta/ruby-labs/artist-song-modules/lib/concerns/memorable.rb": [
+      "/Users/katie/Documents/flatiron/games/artist-song-modules/lib/concerns/memorable.rb": [
         1,
         1,
         1,
@@ -30,7 +30,7 @@
         null,
         null
       ],
-      "/Users/amandahimmelstoss/Development/flatiron-ta/ruby-labs/artist-song-modules/lib/concerns/paramable.rb": [
+      "/Users/katie/Documents/flatiron/games/artist-song-modules/lib/concerns/paramable.rb": [
         1,
         1,
         1,
@@ -39,7 +39,7 @@
         null,
         null
       ],
-      "/Users/amandahimmelstoss/Development/flatiron-ta/ruby-labs/artist-song-modules/lib/artist.rb": [
+      "/Users/katie/Documents/flatiron/games/artist-song-modules/lib/artist.rb": [
         1,
         1,
         1,
@@ -70,7 +70,7 @@
         null,
         null
       ],
-      "/Users/amandahimmelstoss/Development/flatiron-ta/ruby-labs/artist-song-modules/lib/song.rb": [
+      "/Users/katie/Documents/flatiron/games/artist-song-modules/lib/song.rb": [
         1,
         1,
         1,
@@ -101,6 +101,6 @@
         null
       ]
     },
-    "timestamp": 1403298923
+    "timestamp": 1410962680
   }
 }
