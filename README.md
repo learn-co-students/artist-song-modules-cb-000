@@ -1,8 +1,4 @@
----
-  tags: modules, oo
-  language: ruby
-  resources: 2
----
+
 
 # Artists and Songs
 
