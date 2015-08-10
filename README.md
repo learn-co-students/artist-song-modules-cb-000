@@ -62,5 +62,5 @@ Don't forget to modify your environment as needed.
 
 
 ## Resources
-* [Relish](https://www.relishapp.com/rspec/) - [Implicit subject](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples)
+* [Relish](https://www.relishapp.com/rspec/) - [Implicit subject](https://www.relishapp.com/rspec/rspec-core/v/2-0/docs/subject/implicit-subject)
 * [Relish](https://www.relishapp.com/rspec/) - [Shared examples](https://www.relishapp.com/rspec/rspec-core/docs/example-groups/shared-examples)
