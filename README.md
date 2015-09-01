@@ -97,7 +97,7 @@ Let's take a look at the `.initialize` methods of both the `Song` and `Artist` c
 #### `lib/song.rb`
 
 ```ruby
- def .initialize
+ def initialize
     @@songs << self
   end
 ```
