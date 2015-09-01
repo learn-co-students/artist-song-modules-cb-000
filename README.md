@@ -35,7 +35,9 @@ Ready to break your code? Comment out the `reset_all`, `count` and `find_by_name
 
 #### The `Memorable` Module
 
-Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. Inside the `concerns` folder, create a file called `memorable.rb`. Open up that file and define a module: 
+Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. It is a common practice to create a foler called `concerns` and use that folder holds modules that will be used across classes in an object oriented Ruby project. 
+
+Inside the `concerns` folder, create a file called `memorable.rb`. Open up that file and define a module: 
 
 
 ```ruby
@@ -80,7 +82,7 @@ Build the `to_param` method inside your module and use the `include` keyword to 
 
 #### Advanced: The `to_param` Method
 
-In a previous unit, we build a  `slugify` method that made a human-readable file name for each music file that we were creating and writing to. A "slug" can refer to either a file name or a URL. For example, you might visit www.facebook.com/your-name. 
+To understand the concept of a paramter, lest's take a look at an example URL: www.facebook.com/your-name. 
 
 The "your-name" part of the above URL might be referred to as a slug. Another term for this section of a URL is "parameter" or "param". One common task you'll undertake as a web developer is to take a Ruby object, such as an instance of a `User` class, and make a URL out of it. For example, let's say we have a database full of instances of a `User` class. When an individual user signs in to our app, we might want to show them their very own profile page. To do so, we would have to write a method that takes their name and turns it into a slug or parameter that could be tacked onto a URL. 
 
