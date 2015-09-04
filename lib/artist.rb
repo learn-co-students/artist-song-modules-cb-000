@@ -1,6 +1,7 @@
 class Artist
   attr_accessor :name
   attr_reader :songs
+  
   @@artists = []
 
   def self.find_by_name(name)

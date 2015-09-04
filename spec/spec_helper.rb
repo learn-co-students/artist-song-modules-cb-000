@@ -4,11 +4,7 @@
 # loaded once.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'simplecov'
-SimpleCov.start do
-  add_filter 'spec/'
-  add_filter 'config/'
-end
+
 
 require_relative '../config/environment'
 
