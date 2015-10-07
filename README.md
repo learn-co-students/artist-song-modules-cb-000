@@ -105,7 +105,7 @@ Let's take a look at the `.initialize` methods of both the `Song` and `Artist` c
 #### `lib/artist.rb`
 
 ```ruby
-def .initialize
+def initialize
     @@artists << self
     @songs = []
   end
@@ -149,7 +149,7 @@ Let's begin by refactoring the content of both `.initialize` methods to use the 
 #### `lib/song.rb`
 
 ```ruby
-def .initialize
+def initialize
     self.class.all << self
 end
 ```
@@ -157,7 +157,7 @@ end
 #### `lib/artist.rb`
 
 ```ruby
-def .initialize
+def initialize
     self.class.all << self
     @songs = []
 end
@@ -208,7 +208,7 @@ module Memorable
   end
   
   module InstanceMethods
-    def .initialize
+    def initialize
       # some more code coming soon!
     end
   end
@@ -251,7 +251,7 @@ module Memorable
   end
   
   module InstanceMethods
-    def .initialize
+    def initialize
       self.class.all << self
     end
   end
