@@ -15,7 +15,7 @@ Notice that there are behaviors that are shared between both of the these classe
 
 ## Configuring our Environment
 
-Instead of requiring individual files within one another, as you may have noticed we did in the previous two code along exercises, we created an environment file to handle those requirements for us. Open up the `config` directory and look at the `environment.rb` file. You'll see that we'll already requiring the files that hold our `Artist` and `Song` class. Any additional files we make should be required by this `environment.rb` file. Our `spec_helper` file, which is required by each individual spec file, required *only this `config/environment.rb` file*, instead of each and every file from the `lib` directory. As we start to build larger and more complex programs, it begins to make sense to handle all of our requirements in one place. 
+Instead of requiring individual files within one another, as you may have noticed we did in the previous two code along exercises, we created an environment file to handle those requirements for us. Open up the `config` directory and look at the `environment.rb` file. You'll see that we're already requiring the files that hold our `Artist` and `Song` class. Any additional files we make should be required by this `environment.rb` file. Our `spec_helper` file, which is required by each individual spec file, required *only this `config/environment.rb` file*, instead of each and every file from the `lib` directory. As we start to build larger and more complex programs, it begins to make sense to handle all of our requirements in one place. 
 
 ## Instructions 
 
