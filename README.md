@@ -35,7 +35,7 @@ Ready to break your code? Comment out the `reset_all`, `count` and `find_by_name
 
 #### The `Memorable` Module
 
-Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. It is a common practice to create a foler called `concerns` and use that folder holds modules that will be used across classes in an object oriented Ruby project. 
+Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. It is a common practice to create a folder called `concerns` and use that folder holds modules that will be used across classes in an object oriented Ruby project. 
 
 Inside the `concerns` folder, create a file called `memorable.rb`. Open up that file and define a module: 
 
