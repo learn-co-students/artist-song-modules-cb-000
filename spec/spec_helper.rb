@@ -5,8 +5,9 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require_relative '../lib/artist'
+require_relative '../lib/song'
 
-require_relative '../config/environment'
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
