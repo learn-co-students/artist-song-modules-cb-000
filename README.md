@@ -13,10 +13,6 @@ Open up the `lib` directory and spend some time reviewing the code in `artist.rb
 
 Notice that there are behaviors that are shared between both of the these classes. For example, both classes have `.count` and `reset_all` class methods. Consequently, both classes have *the same exact code*. As programmers, you may recall, we are lazy. We don't like to repeat ourselves. We like to keep it DRY (Don't Repeat Yourself). In this lab, we'll be identifying repetition and building modules to extract it out. Then, we'll use the `extend` and `include` keywords to lend the functionality of our modules to our `Artist` and `Song` classes.
 
-## Configuring our Environment
-
-Instead of requiring individual files within one another, as you may have noticed we did in the previous two code along exercises, we created an environment file to handle those requirements for us. Open up the `config` directory and look at the `environment.rb` file. You'll see that we're already requiring the files that hold our `Artist` and `Song` class. Any additional files we make should be required by this `environment.rb` file. Our `spec_helper` file, which is required by each individual spec file, required *only this `config/environment.rb` file*, instead of each and every file from the `lib` directory. As we start to build larger and more complex programs, it begins to make sense to handle all of our requirements in one place.
-
 ## Instructions
 
 ### A Note on Refactoring Practices
