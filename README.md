@@ -72,3 +72,5 @@ end
 ```
 
 Build the `#to_param` method inside your module and use the `include` keyword to include the `Paramable` module in both the `Song` and `Artist` class. Once you get your tests passing again, go ahead and delete the commented-out `to_param` method from the `Song` and `Artist` classes.
+
+<a href='https://learn.co/lessons/artist-song-modules' data-visibility='hidden'>View this lesson on Learn.co</a>
