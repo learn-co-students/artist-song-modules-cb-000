@@ -49,7 +49,7 @@ Now you're ready to run you test suite again. Get all those tests back to passin
 
 Before we build the module to house this method, let's talk a bit about this method. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store user's information and the information pertinent to the app. Let's think about a common example:
 
-Let's say your working on an app that serves as online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item. We have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
+Let's say you're working on an app that serves as online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item. We have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
 
 Okay, back to you're regularly scheduled programming:
 
@@ -72,5 +72,3 @@ end
 ```
 
 Build the `#to_param` method inside your module and use the `include` keyword to include the `Paramable` module in both the `Song` and `Artist` class. Once you get your tests passing again, go ahead and delete the commented-out `to_param` method from the `Song` and `Artist` classes.
-
-<a href='https://learn.co/lessons/artist-song-modules' data-visibility='hidden'>View this lesson on Learn.co</a>
