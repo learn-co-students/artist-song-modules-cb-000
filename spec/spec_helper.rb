@@ -5,6 +5,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+
+require_relative '../config/environment'
 require_relative '../lib/artist'
 require_relative '../lib/song'
 
