@@ -45,7 +45,9 @@ module Memorable
 end
 ```
 
-Inside here, define your `reset_all`, `count` and `find_by_name` methods. Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests.
+Inside here, define your `reset_all`, `count` and `find_by_name` methods. 
+
+Important! Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out :)
 
 Once you define the three class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help.
 
@@ -78,6 +80,8 @@ end
 ```
 
 Build the `to_param` method inside your module and use the `include` keyword to include the `Paramable` module in both the `Song` and `Artist` class. Once you get your tests passing again, go ahead and delete the commented-out `to_param` method from the `Song` and `Artist` classes.
+
+Important! Remember to add `require_relative '../lib/concerns/paramable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out :)
 
 
 #### Advanced: The `to_param` Method
