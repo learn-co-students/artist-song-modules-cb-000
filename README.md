@@ -61,6 +61,44 @@ Let's say your working on an app that serves as online store, connecting users t
 
 Okay, back to you're regularly scheduled programming:
 
+#### The `Findable` Module
+
+In `lib/concerns`, create a file, `findable.rb`. In this file, define a module: `Findable`. This module should define the method, `find_by_name`. This method will be used as a class method. Something like this:
+
+```ruby
+Artist.find_by_name("Adele")
+#=> #<Artistx038230sdcmdn3872>
+```
+
+Extract the code from the `find_by_name` methods that you'll see in the `Artist` and `Song` classes and place it inside the `Findable` module's `find_by_name` method. 
+
+Remember that we need to keep the content of this method abstract. So, inside the `Artist` class, a `find_by_name` method might look like this:
+
+```ruyb
+class Artist
+
+  @@artists = []
+  
+  attr_accessor :name
+  
+  def initialize(name)
+    @name = name
+  end
+  
+  def self.all
+    @@artists
+  end
+  
+  def self.find_by_name(name)
+    @@artists.detect {|a| a.name == name}
+  end
+end
+```
+
+Inside the `Findable.find_by_name` method, we can't use a class-specific class variable like `@@artists`, because our method would break when included in any class that *didn't* define such a variable. 
+
+Is there a way to reference the collection of *all* of the instances of a class, without sepcifically referencing class variables that are only defined in certain classes?
+
 
 ### Step 2: Instance Methods
 
