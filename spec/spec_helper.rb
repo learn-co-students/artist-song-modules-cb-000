@@ -7,8 +7,6 @@
 
 
 require_relative '../config/environment'
-require_relative '../lib/artist'
-require_relative '../lib/song'
 
 
 RSpec.configure do |config|
