@@ -35,7 +35,7 @@ Ready to break your code? Comment out the `reset_all`, `count` and `find_by_name
 
 #### The `Memorable` Module
 
-Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. It is a common practice to create a folder called `concerns` and use that folder holds modules that will be used across classes in an object oriented Ruby project.
+Let's define our module. Create a `concerns` folder inside `lib`. This is where we'll store our modules. It is a common practice to create a folder called `concerns` that holds modules that will be used across classes in an object oriented Ruby project.
 
 Inside the `concerns` folder, create a file called `memorable.rb`. Open up that file and define a module:
 
@@ -294,3 +294,5 @@ class Artist
 Phew! That was some complex stuff. It's okay if you didn't understand everything covered in this lab. There were a few advanced and bonus sections that we threw in there to challenge you and make you think. Don't skip over them, even if you can't follow everything they discuss. It's important to plant the seed of some of these more complex topics––it will make them easier to understand later on when you're ready to go deeper into Ruby programming.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
