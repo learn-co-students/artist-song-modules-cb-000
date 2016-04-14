@@ -27,7 +27,7 @@ This is called the **red, green, refactor** pattern. First tests fail, then you 
 
 ### Step 1: Class Methods
 
-First, run the test suite. Wow, we're passing all of our tests! Okay, not let go of those passing tests because we are about to break our code.
+First, run the test suite. Wow, we're passing all of our tests! Okay, now let go of those passing tests because we are about to break our code.
 
 The first area of refactoring we'll be attacking are the class methods. Notice that both the `Song` and `Artist` class have `.count`, `reset_all` and `find_by_name` class methods. Instead of repeating the same exact code in both classes, let's extract these class methods into a module that we can *extend* into the classes.
 
