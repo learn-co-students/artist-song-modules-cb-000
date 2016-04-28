@@ -336,7 +336,3 @@ class Artist
 Phew! That was some complex stuff. It's okay if you didn't understand everything covered in this lab. There were a few advanced and bonus sections that we threw in there to challenge you and make you think. Don't skip over them, even if you can't follow everything they discuss. It's important to plant the seed of some of these more complex topics––it will make them easier to understand later on when you're ready to go deeper into Ruby programming.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
