@@ -21,7 +21,7 @@ Instead of requiring individual files within one another, as you may have notice
 
 ### A Note on Refactoring Practices
 
-We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first right is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. If we write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
+We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first write is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. If we write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
 
 This is called the **red, green, refactor** pattern. First tests fail, then you write bad code to get them to pass, *then* you refactor that bad code into good code. In this lab, you'll start by running the test suite. You'll see that all of the tests pass. Then, we'll break that code in order to refactor it, write better code and get our tests passing again. Remember, don't be afraid of broken code! Broken code is the status quo in programming. Your job is often to break something to make it better. Embrace broken code.
 
@@ -336,3 +336,5 @@ class Artist
 Phew! That was some complex stuff. It's okay if you didn't understand everything covered in this lab. There were a few advanced and bonus sections that we threw in there to challenge you and make you think. Don't skip over them, even if you can't follow everything they discuss. It's important to plant the seed of some of these more complex topics––it will make them easier to understand later on when you're ready to go deeper into Ruby programming.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
