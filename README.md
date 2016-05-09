@@ -21,7 +21,7 @@ Instead of requiring individual files within one another, as you may have notice
 
 ### A Note on Refactoring Practices
 
-We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first right is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. If we write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
+We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first write is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. If we write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
 
 This is called the **red, green, refactor** pattern. First tests fail, then you write bad code to get them to pass, *then* you refactor that bad code into good code. In this lab, you'll start by running the test suite. You'll see that all of the tests pass. Then, we'll break that code in order to refactor it, write better code and get our tests passing again. Remember, don't be afraid of broken code! Broken code is the status quo in programming. Your job is often to break something to make it better. Embrace broken code.
 
@@ -97,7 +97,7 @@ end
 
 Inside the `Findable.find_by_name` method, we can't use a class-specific class variable like `@@artists`, because our method would break when included in any class that *didn't* define such a variable. 
 
-Is there a way to reference the collection of *all* of the instances of a class, without sepcifically referencing class variables that are only defined in certain classes?
+Is there a way to reference the collection of *all* of the instances of a class, without specifically referencing class variables that are only defined in certain classes?
 
 
 ### Step 2: Instance Methods
@@ -124,7 +124,7 @@ Important! Remember to add `require_relative '../lib/concerns/paramable'` to you
 
 #### Advanced: The `to_param` Method
 
-To understand the concept of a paramter, lest's take a look at an example URL: www.facebook.com/your-name.
+To understand the concept of a parameter, let's take a look at an example URL: www.facebook.com/your-name.
 
 The "your-name" part of the above URL might be referred to as a slug. Another term for this section of a URL is "parameter" or "param". One common task you'll undertake as a web developer is to take a Ruby object, such as an instance of a `User` class, and make a URL out of it. For example, let's say we have a database full of instances of a `User` class. When an individual user signs in to our app, we might want to show them their very own profile page. To do so, we would have to write a method that takes their name and turns it into a slug or parameter that could be tacked onto a URL.
 
@@ -337,4 +337,4 @@ Phew! That was some complex stuff. It's okay if you didn't understand everything
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
