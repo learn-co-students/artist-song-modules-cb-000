@@ -47,19 +47,19 @@ end
 
 Inside here, define your `reset_all`, `count` and `find_by_name` methods. 
 
-Important! Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out :)
+Important! Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out. :)
 
 Once you define the three class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help.
 
-Now you're ready to run you test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all`, `count` and `find_by_name` class methods from your `Song` and `Artist` class. You don't need them anymore.
+Now you're ready to run your test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all`, `count` and `find_by_name` class methods from your `Song` and `Artist` class. You don't need them anymore.
 
 #### Advanced: The `find_by_name` Method
 
-Before we build the module to house this method, let's talk a bit about this method. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store user's information and the information pertinent to the app. Let's think about a common example:
+Before we build the module to house this method, let's talk a bit about this method. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store users' information and the information pertinent to the app. Let's think about a common example:
 
-Let's say you're working on an app that serves as online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item. We have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
+Let's say you're working on an app that serves as an online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item, we have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
 
-Okay, back to you're regularly scheduled programming:
+Okay, back to your regularly scheduled programming:
 
 #### The `Findable` Module
 
@@ -102,7 +102,7 @@ Is there a way to reference the collection of *all* of the instances of a class,
 
 ### Step 2: Instance Methods
 
-Let's go back to our `Song` and `Artist` class and take a look at another example of repetition. This time with instance methods. The `to_param` instance method is repeated in the `Song` and `Artist` class. Another great candidate for refactoring!
+Let's go back to our `Song` and `Artist` class and take a look at another example of repetition, this time with instance methods. The `to_param` instance method is repeated in the `Song` and `Artist` class. Another great candidate for refactoring!
 
 Go ahead and comment out the `to_param` method in both the `Song` and `Artist` class. Run your test suite again and see those broken tests!
 
@@ -119,7 +119,7 @@ end
 
 Build the `to_param` method inside your module and use the `include` keyword to include the `Paramable` module in both the `Song` and `Artist` class. Once you get your tests passing again, go ahead and delete the commented-out `to_param` method from the `Song` and `Artist` classes.
 
-Important! Remember to add `require_relative '../lib/concerns/paramable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out :)
+Important! Remember to add `require_relative '../lib/concerns/paramable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out. :)
 
 
 #### Advanced: The `to_param` Method
@@ -229,9 +229,9 @@ Now we have two `.initialize` methods that contain identical lines of code. We'r
 
 #### Extracting Repetition
 
-Before we build a brand new module to house this code from our `.initialize` methods, let's stop and think. What is the responsibility or the behavior of the code we are trying to extract? This is code that is responsible for telling a class to keep track of it's own instances. This code really goes hand in hand with the `.count` and `.reset_all` class methods that we already extracted into the `Memorable` module. It makes sense, therefore, to extract this code into that same module.
+Before we build a brand new module to house this code from our `.initialize` methods, let's stop and think. What is the responsibility or the behavior of the code we are trying to extract? This is code that is responsible for telling a class to keep track of its own instances. This code really goes hand in hand with the `.count` and `.reset_all` class methods that we already extracted into the `Memorable` module. It makes sense, therefore, to extract this code into that same module.
 
-But wait (you might be thinking), isn't that module **extended** into our `Song` and `Artist` class in order to offer it's methods as **class** methods? Isn't `.initialize` an instance method? How can we put class methods and instance methods in the same module? Read on to learn the answer...
+But wait (you might be thinking), isn't that module **extended** into our `Song` and `Artist` class in order to offer its methods as **class** methods? Isn't `.initialize` an instance method? How can we put class methods and instance methods in the same module? Read on to learn the answer...
 
 #### Nesting Modules
 
