@@ -11,7 +11,7 @@ In this lab, we have a similar domain model to that of Playlister. We have an `A
 
 Open up the `lib` directory and spend some time reviewing the code in `artist.rb` and `song.rb`. Keep reading the code until you feel you understand what each method is doing.
 
-Notice that there are behaviors that are shared between both of the these classes. For example, both classes have `.count` and `reset_all` class methods. Consequently, both classes have *the same exact code*. As programmers, you may recall, we are lazy. We don't like to repeat ourselves. We like to keep it DRY (Don't Repeat Yourself). In this lab, we'll be identifying repetition and building modules to extract it out. Then, we'll use the `extend` and `include` keywords to lend the functionality of our modules to our `Artist` and `Song` classes.
+Notice that there are behaviors that are shared between both of these classes. For example, both classes have `.count` and `reset_all` class methods. Consequently, both classes have *the same exact code*. As programmers, you may recall, we are lazy. We don't like to repeat ourselves. We like to keep it DRY (Don't Repeat Yourself). In this lab, we'll be identifying repetition and building modules to extract it out. Then, we'll use the `extend` and `include` keywords to lend the functionality of our modules to our `Artist` and `Song` classes.
 
 ## Configuring our Environment
 
