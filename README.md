@@ -29,9 +29,9 @@ This is called the **red, green, refactor** pattern. First tests fail, then you 
 
 First, run the test suite. Wow, we're passing all of our tests! Okay, now let go of those passing tests because we are about to break our code.
 
-The first area of refactoring we'll be attacking are the class methods. Notice that both the `Song` and `Artist` class have `.count`, `reset_all` and `find_by_name` class methods. Instead of repeating the same exact code in both classes, let's extract these class methods into a module that we can *extend* into the classes.
+The first area of refactoring we'll be attacking are the class methods. Notice that both the `Song` and `Artist` class have `.count` and `reset_all` class methods. Instead of repeating the same exact code in both classes, let's extract these class methods into a module that we can *extend* into the classes.
 
-Ready to break your code? Comment out the `reset_all`, `count` and `find_by_name` methods in the `Song` and `Artist` class. Run your test suite. Phew! Okay, we did it. That wasn't so bad, was it?
+Ready to break your code? Comment out the `reset_all` and `count` methods in the `Song` and `Artist` class. Run your test suite. Phew! Okay, we did it. That wasn't so bad, was it?
 
 #### The `Memorable` Module
 
@@ -45,17 +45,17 @@ module Memorable
 end
 ```
 
-Inside here, define your `reset_all`, `count` and `find_by_name` methods. 
+Inside here, define your `reset_all` and `count` methods. 
 
 Important! Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out. :)
 
-Once you define the three class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help.
+Once you define the two class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help.
 
-Now you're ready to run your test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all`, `count` and `find_by_name` class methods from your `Song` and `Artist` class. You don't need them anymore.
+Now you're ready to run your test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all` and `count` class methods from your `Song` and `Artist` class. You don't need them anymore.
 
 #### Advanced: The `find_by_name` Method
 
-Before we build the module to house this method, let's talk a bit about this method. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store users' information and the information pertinent to the app. Let's think about a common example:
+Before we build the module to house this method, let's talk a bit about it. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store users' information and the information pertinent to the app. Let's think about a common example:
 
 Let's say you're working on an app that serves as an online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item, we have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
 
