@@ -74,7 +74,7 @@ Extract the code from the `find_by_name` methods that you'll see in the `Artist`
 
 Remember that we need to keep the content of this method abstract. So, inside the `Artist` class, a `find_by_name` method might look like this:
 
-```ruyb
+```ruby
 class Artist
 
   @@artists = []
