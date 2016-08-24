@@ -315,7 +315,7 @@ class Artist
 
 In the `Artist` class, the initialize method is *also* responsible for setting the `@songs` instance variable equal to an empty array. We need to hang on to this behavior, even as `Artist` instances grab the *rest* of the `.initialize` from the `Memorable::InstanceMethods` module.
 
-Remember our `super` keyword from the inheritance code along exercise? The `super` keyword, placed inside a method, will tell that method to look up it's behavior in the method of the same name that lives in the parent, or super, class. A method that includes the `super` keyword will execute any code placed inside the super class' method of the same name, and then execute any code inside the child class' method.
+Remember our `super` keyword from the inheritance code along exercise? The `super` keyword, placed inside a method, will tell that method to look up its behavior in the method of the same name that lives in the parent, or super, class. A method that includes the `super` keyword will execute any code placed inside the super class' method of the same name, and then execute any code inside the child class' method.
 
 When we `include` a module in a class, we are really telling that class to *inherit* methods from that module.
 
