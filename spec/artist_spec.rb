@@ -5,10 +5,6 @@ describe Artist do
     Artist.reset_all
   end
 
-  # What's the difference between let! and let?
-  # Why do we need it? Change it to the non ! version
-  # and see what test suddenly fails.
-  # http://betterspecs.org/#let
   let!(:artist){Artist.new}
 
 
