@@ -7,7 +7,7 @@
 
 ## Overview
 
-In this lab, we have a similar domain model to that of Playlister. We have an `Artist` class and a `Song` class. `Artist`s have many songs and an individual instance of the `Song` class belongs to an artist. `Artist`s and `Song`s also have some familiar class methods that keep track of all of the instances of the class, count those instances and clear or reset them.
+In this lab, we have an `Artist` class and a `Song` class. `Artist`s have many songs and an individual instance of the `Song` class belongs to an artist. `Artist`s and `Song`s also have some familiar class methods that keep track of all of the instances of the class, count those instances and clear or reset them.
 
 Open up the `lib` directory and spend some time reviewing the code in `artist.rb` and `song.rb`. Keep reading the code until you feel you understand what each method is doing.
 
@@ -302,7 +302,6 @@ end
 
 There's just one more step. Look back at the original `.initialize` method of the `Artist` class:
 
-
 ```ruby
 class Artist
   ...
@@ -336,5 +335,3 @@ class Artist
 Phew! That was some complex stuff. It's okay if you didn't understand everything covered in this lab. There were a few advanced and bonus sections that we threw in there to challenge you and make you think. Don't skip over them, even if you can't follow everything they discuss. It's important to plant the seed of some of these more complex topics––it will make them easier to understand later on when you're ready to go deeper into Ruby programming.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
