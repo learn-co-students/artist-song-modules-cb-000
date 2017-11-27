@@ -7,7 +7,7 @@
 
 ## Overview
 
-In this lab, we have a similar domain model to that of Playlister. We have an `Artist` class and a `Song` class. `Artists` have many songs and an individual instance of the `Song` class belongs to an artist. `Artist`s and `Song`s also have some familiar class methods that keep track of all of the instances of the class, count those instances and clear or reset them.
+In this lab, we have an `Artist` class and a `Song` class. `Artist`s have many songs and an individual instance of the `Song` class belongs to an artist. `Artist`s and `Song`s also have some familiar class methods that keep track of all of the instances of the class, count those instances and clear or reset them.
 
 Open up the `lib` directory and spend some time reviewing the code in `artist.rb` and `song.rb`. Keep reading the code until you feel you understand what each method is doing.
 
@@ -21,7 +21,7 @@ Instead of requiring individual files within one another, as you may have notice
 
 ### A Note on Refactoring Practices
 
-We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first write is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. If we write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
+We use TDD (test-driven development) for a reason. We write tests to define the desired behavior of our program so that we can write clean, beautiful code. Such code usually *isn't* the code you write the first time around. The code you first write is the code that makes your program *work*, the code that gets those tests passing. Then, we refactor our code to make it clean, DRY, and easy to understand. This is where our tests come in. We write thorough tests that cover all of the aspects of our code's desired behavior. We can *first* write code that passes those tests and *then* break our code, fail our tests, write better code and pass our tests again.
 
 This is called the **red, green, refactor** pattern. First tests fail, then you write bad code to get them to pass, *then* you refactor that bad code into good code. In this lab, you'll start by running the test suite. You'll see that all of the tests pass. Then, we'll break that code in order to refactor it, write better code and get our tests passing again. Remember, don't be afraid of broken code! Broken code is the status quo in programming. Your job is often to break something to make it better. Embrace broken code.
 
@@ -29,9 +29,9 @@ This is called the **red, green, refactor** pattern. First tests fail, then you 
 
 First, run the test suite. Wow, we're passing all of our tests! Okay, now let go of those passing tests because we are about to break our code.
 
-The first area of refactoring we'll be attacking are the class methods. Notice that both the `Song` and `Artist` class have `.count`, `reset_all` and `find_by_name` class methods. Instead of repeating the same exact code in both classes, let's extract these class methods into a module that we can *extend* into the classes.
+The first area of refactoring we'll be attacking are the class methods. Notice that both the `Song` and `Artist` class have `.count` and `reset_all` class methods. Instead of repeating the same exact code in both classes, let's extract these class methods into a module that we can *extend* into the classes.
 
-Ready to break your code? Comment out the `reset_all`, `count` and `find_by_name` methods in the `Song` and `Artist` class. Run your test suite. Phew! Okay, we did it. That wasn't so bad, was it?
+Ready to break your code? Comment out the `reset_all` and `count` methods in the `Song` and `Artist` class. Run your test suite. Phew! Okay, we did it. That wasn't so bad, was it?
 
 #### The `Memorable` Module
 
@@ -45,17 +45,17 @@ module Memorable
 end
 ```
 
-Inside here, define your `reset_all`, `count` and `find_by_name` methods. 
+Inside here, define your `reset_all` and `count` methods.
 
 Important! Remember to add `require_relative '../lib/concerns/memorable'` to your environment file before running any tests. We've already provided that line for you in fact! All you have to do is un-comment it out. :)
 
-Once you define the three class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help.
+Once you define the two class methods mentioned above inside of the `Memorable` module, use the `extend` keyword to extend those methods, as class methods, into both the `Artist` and `Song` class. Refer to the previous code along exercise for help. Remember that the `self` keyword is omitted when defining class methods inside modules. The `extend` keyword is responsible for defining the method as a class method vs. an instance method (which would use the `include` keyword).
 
-Now you're ready to run your test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all`, `count` and `find_by_name` class methods from your `Song` and `Artist` class. You don't need them anymore.
+Now you're ready to run your test suite again. Get all those tests back to passing before you move on. Once your tests are passing, make sure you delete the commented-out `reset_all` and `count` class methods from your `Song` and `Artist` class. You don't need them anymore.
 
 #### Advanced: The `find_by_name` Method
 
-Before we build the module to house this method, let's talk a bit about this method. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store users' information and the information pertinent to the app. Let's think about a common example:
+Before we build the module to house this method, let's talk a bit about it. In an upcoming unit, we'll be introducing databases. You'll learn how to connect your Ruby programs to a database and use that database to store information––even Ruby objects! Moving forward through this course, you'll be building web applications that are connected to databases that store users' information and the information pertinent to the app. Let's think about a common example:
 
 Let's say you're working on an app that serves as an online store, connecting users to everything from books to movies to shoes to stereo equipment, you name it. We'll call this app "Nile" (definitely not inspired by another online market-place named after a famous river). Such an application needs to store the items it has for sale as well as the information of the user who logs in to go shopping. Consequently, every time a user logs in, or searches for an item, or purchases an item, we have to *retrieve information from a database*. One of the most common ways you'll be doing that is to use methods like `find_by_name` or `find_by_email` or `find_by_product_id` or...you get the idea. We'll be learning much, much more about this later. Here, we're building a simple `find_by_name` method that introspects on a class's `.all` class method and extracts the instance of the class with a certain name.
 
@@ -70,32 +70,32 @@ Artist.find_by_name("Adele")
 #=> #<Artistx038230sdcmdn3872>
 ```
 
-Extract the code from the `find_by_name` methods that you'll see in the `Artist` and `Song` classes and place it inside the `Findable` module's `find_by_name` method. 
+Extract the code from the `find_by_name` methods that you'll see in the `Artist` and `Song` classes and place it inside the `Findable` module's `find_by_name` method.
 
 Remember that we need to keep the content of this method abstract. So, inside the `Artist` class, a `find_by_name` method might look like this:
 
-```ruyb
+```ruby
 class Artist
 
   @@artists = []
-  
+
   attr_accessor :name
-  
+
   def initialize(name)
     @name = name
   end
-  
+
   def self.all
     @@artists
   end
-  
+
   def self.find_by_name(name)
     @@artists.detect {|a| a.name == name}
   end
 end
 ```
 
-Inside the `Findable.find_by_name` method, we can't use a class-specific class variable like `@@artists`, because our method would break when included in any class that *didn't* define such a variable. 
+Inside the `Findable.find_by_name` method, we can't use a class-specific class variable like `@@artists`, because our method would break when included in any class that *didn't* define such a variable.
 
 Is there a way to reference the collection of *all* of the instances of a class, without specifically referencing class variables that are only defined in certain classes?
 
@@ -302,7 +302,6 @@ end
 
 There's just one more step. Look back at the original `.initialize` method of the `Artist` class:
 
-
 ```ruby
 class Artist
   ...
@@ -315,7 +314,7 @@ class Artist
 
 In the `Artist` class, the initialize method is *also* responsible for setting the `@songs` instance variable equal to an empty array. We need to hang on to this behavior, even as `Artist` instances grab the *rest* of the `.initialize` from the `Memorable::InstanceMethods` module.
 
-Remember our `super` keyword from the inheritance code along exercise? The `super` keyword, placed inside a method, will tell that method to look up it's behavior in the method of the same name that lives in the parent, or super, class. A method that includes the `super` keyword will execute any code placed inside the super class' method of the same name, and then execute any code inside the child class' method.
+Remember our `super` keyword from the inheritance code along exercise? The `super` keyword, placed inside a method, will tell that method to look up its behavior in the method of the same name that lives in the parent, or super, class. A method that includes the `super` keyword will execute any code placed inside the super class' method of the same name, and then execute any code inside the child class' method.
 
 When we `include` a module in a class, we are really telling that class to *inherit* methods from that module.
 
@@ -336,5 +335,3 @@ class Artist
 Phew! That was some complex stuff. It's okay if you didn't understand everything covered in this lab. There were a few advanced and bonus sections that we threw in there to challenge you and make you think. Don't skip over them, even if you can't follow everything they discuss. It's important to plant the seed of some of these more complex topics––it will make them easier to understand later on when you're ready to go deeper into Ruby programming.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/artist-song-modules' title='Refactoring with Modules'>Refactoring with Modules</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/artist-song-modules'>Intro to Modules Lab</a> on Learn.co and start learning to code for free.</p>
