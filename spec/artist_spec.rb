@@ -9,7 +9,7 @@ describe Artist do
   # Why do we need it? Change it to the non ! version
   # and see what test suddenly fails.
   # http://betterspecs.org/#let
-  let!(:artist){Artist.new}
+  let(:artist){Artist.new}
 
 
   it "can be initialized" do
