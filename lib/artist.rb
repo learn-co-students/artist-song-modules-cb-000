@@ -1,5 +1,5 @@
 require 'pry'
-
+# Old lesson - repetition helps me remember old school concepts
 class Artist
   attr_accessor :name
   attr_reader :songs
