@@ -1,3 +1,5 @@
+
+
 module Memorable
   module ClassMethods
       def count
