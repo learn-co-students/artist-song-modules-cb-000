@@ -1,4 +1,3 @@
-require 'pry'
 
 class Artist
   attr_accessor :name
@@ -11,13 +10,17 @@ class Artist
 
   @@artists = []
 
-  def self.all
-    @@artists
+  def initialize
+    @@artists << self
+    @songs = []
   end
 
-  def initialize
-    super
-    @songs = []
+  def self.find_by_name(name)
+    @@artists.detect{|a| a.name == name}
+  end
+
+  def self.all
+    @@artists
   end
 
   def add_song(song)
