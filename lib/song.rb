@@ -14,23 +14,23 @@ class Song
     @@songs.detect{|a| a.name == name}
   end
 
-  def artist=(artist)
-    @artist = artist
+  def self.all
+    @@songs
   end
 
   def self.reset_all
-    @@songs.clear
-  end
-
-  def to_param
-    name.downcase.gsub(' ', '-')
+    self.all.clear
   end
 
   def self.count
     self.all.count
   end
 
-  def self.all
-    @@songs
+  def artist=(artist)
+    @artist = artist
+  end
+
+  def to_param
+    name.downcase.gsub(' ', '-')
   end
 end
