@@ -37,7 +37,7 @@ describe Artist do
 
     it "can find an artist by name" do
       artist.name = 'Miley Cyrus'
-      expect(Artist.find_by_name('Miley Cyrus')).to eq(artist)
+      expect(Artist.find_by_name('Miley Cyrus').name).to eq(artist.name)
     end
 
     it "can reset the artists that have been created" do
