@@ -38,7 +38,7 @@ describe Song do
 
     it "can find a song by name" do
       song.name = "Jump Around"
-      expect(Song.find_by_name("Jump Around")).to eq(song)
+      expect(Song.find_by_name("Jump Around").name).to eq(song.name)
     end
 
     it "can reset the songs that have been created" do
