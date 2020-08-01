@@ -1,7 +1,5 @@
 require 'pry'
-require_relative '../lib/concerns/findable.rb'
-require_relative '../lib/concerns/paramable.rb'
-require_relative '../lib/concerns/memorable.rb'
+
 
 class Song
   attr_accessor :name
